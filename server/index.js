@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin:"course-hub-frontend-seven.vercel.app",
+		origin: process.env.FRONTEND_URL,
 		credentials:true,
 	})
 )
