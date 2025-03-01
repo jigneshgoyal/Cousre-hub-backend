@@ -18,15 +18,15 @@ const PORT = 4000;
 
 //database connect
 database.connect();
-//middlewares
-app.use(express.json());
-app.use(cookieParser());
 app.use(
   cors({
 	  origin: process.env.FRONTEND_URL,
 	  credentials: true,
   })
 );
+//middlewares
+app.use(express.json());
+app.use(cookieParser());
 
 // app.use(cors());
 
